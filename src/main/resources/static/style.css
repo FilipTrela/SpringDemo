@@ -1,0 +1,25 @@
+.title {
+    color: red;
+}
+
+html, body {
+    margin: 5px;
+    padding: 5px;
+}
+
+body {
+    background-color: #364135;
+    color: azure;
+}
+fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+

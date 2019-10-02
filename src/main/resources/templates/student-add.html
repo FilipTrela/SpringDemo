@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <title>Student Add</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" th:href="@{/demo/hello}">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/student/list}">List Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/student/add}">Dodaj Studenta</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.facebook.com/filip.trela?ref=bookmarks" class="nav-link fa fa-facebook"></a>
+            </li>
+            <li class="nav-item">
+                <a href="https://github.com/FilipTrela" class="nav-link fa fa-github"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<blockquote class="blockquote text-right">
+    <p class="mb-0">Jak dodasz studenta tak sie wyśpisz.</p>
+    <footer class="blockquote-footer">Filip Trela w <cite title="Source Title">Myśli i Twory</cite></footer>
+</blockquote>
+<h1 class="display-4">Student Add</h1>
+<form th:action="@{/student/add}" method="post" th:object="${student}">
+    <input type="hidden" th:field="*{id}" th:value="*{id}">
+    Name: <input type="text" th:field="*{name}" th:value="*{name}">
+    Surname: <input type="text" th:field="*{surname}" th:value="*{surname}">
+    Age: <input type="number" th:field="*{age}" th:value="*{age}">
+    Is Alive : <input type="checkbox" th:field="*{alive}" th:value="*{alive}">
+    <input type="submit" class="btn btn-link btn-lg btn-block">
+</form>
+
+</body>
+</html>
